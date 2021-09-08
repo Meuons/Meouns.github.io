@@ -1,0 +1,9 @@
+img{
+    width: 300px;
+}
+.current{
+display: block;
+}
+img{
+    display: none;
+}

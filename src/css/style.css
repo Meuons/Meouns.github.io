@@ -1,0 +1,71 @@
+/*Theme Name: Hi*/
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+    font-size: 1.5em ;
+    line-height: 1.25em;
+    margin: 0;
+    padding: 0;
+    min-height: 90vh;
+    padding-bottom: 6em;
+    position: relative;}
+
+    nav{
+        width: 100%;
+        align-self: flex-end;  
+    }
+    footer{
+padding: 10px;
+background-color: #696969;
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+a{
+    text-decoration: none;
+    color:#000000;
+}
+h4{
+    text-align: center;
+}
+p{
+    font-family: 'optima';
+}
+
+ ul {
+        list-style-type: none;
+    }    
+
+#logo{
+        width: 250px;
+        padding: 10px;
+}
+    header li{
+        display:inline;
+        margin-right: 100% ;
+    }
+    
+   
+header{
+    position: absolute;
+    background-color: #838383;
+    top: 0;
+    width: 100%;
+    display: flex;
+    margin-bottom: 1000px;
+}
+
+.container{
+    position: relative;
+    top: 150px;
+    margin-bottom: 200px;
+}
+
+
+
+
