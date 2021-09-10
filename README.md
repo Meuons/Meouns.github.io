@@ -1,4 +1,8 @@
-
+# The purpose of auotmation
+The purpose of automation is to save time for the developers by freeing them of menial 
+time consuming tasks like moving files from folders everytime they make a change for instance. 
+By automatically applying the changes made in the development folder to the publishing folder 
+errors like accidentally leaving out changes when transfering information.
 
 # Packages and tools used
 gulp-concat is used to concat separate css and javascript files.
@@ -22,13 +26,12 @@ The watch task automatically activates the other tasks when a file is changed
 
 The liverload task reloads the page when a file is changed
 
-
-
 # Installaltion
 
 Write the follwing commands in the terminal
 1. npm install --save-dev gulp-concat
 2. npm install gulp-terser --save-dev
 3. npm install --save-dev gulp-livereload
-4. npm install --save-dev minify-css
-5. gulp
+4. npm install gulp-cli
+5. npm install --save-dev minify-css
+6. gulp
