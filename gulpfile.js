@@ -37,8 +37,9 @@ function imgTask() {
 function cssTask() {
     return src(files.cssPath)
     .pipe(concat('styles.css'))
-    .pipe(dest('pub/css'))
     .pipe(minifyCSS())
+    .pipe(dest('pub/css'))
+    
     
 }
 //JS-task,  minify, concat
