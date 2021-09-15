@@ -30,8 +30,8 @@ The liverload task reloads the page when a file is changed
 
 Write the follwing commands in the terminal
 1. npm install --save-dev gulp-concat
-2. npm install gulp-terser --save-dev
-3. npm install gulp-cli
+2. npm install --save-dev gulp-terser --save-dev
+3. npm install --save-dev gulp-cli
 4. npm install --save-dev minify-css
-5. npm install browser-sync
+5. npm install--save-dev browser-sync
 6. gulp
