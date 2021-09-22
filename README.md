@@ -33,5 +33,5 @@ Write the follwing commands in the terminal
 2. npm install --save-dev gulp-terser
 3. npm install --save-dev gulp-cli
 4. npm install --save-dev gulp-minify-css
-5. npm install--save-dev browser-sync
+5. npm install --save-dev browser-sync
 6. gulp
