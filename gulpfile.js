@@ -66,7 +66,7 @@ function watchTask(){
 }
 
 
-exports.default = series(
-    parallel(htmlTask, jsTask, cssTask, imgTask, reloadTask)),
+exports.default = series (
+    parallel(htmlTask, jsTask, imgTask, cssTask, reloadTask),
     watchTask
 );
