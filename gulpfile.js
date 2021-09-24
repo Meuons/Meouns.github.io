@@ -3,7 +3,7 @@ const concat = require('gulp-concat');
 const minifyCSS = require('gulp-minify-css');
 const terser = require('gulp-terser');
 const livereload = require('gulp-livereload');
-let browserSync = require('browser-sync').create();
+
 const options = {
     html: {
         removeAttributeQuotes: false,
@@ -11,11 +11,7 @@ const options = {
     },
 };
 
-function reloadTask() {
-browserSync.init({
-    server: "./pub"
-});
-}
+
 
 
 livereload({ start: true })
@@ -32,7 +28,6 @@ function htmlTask() {
 return src(files.htmlPath)
 
 .pipe(dest('pub'))
-.pipe(browserSync.stream());
 
 }
 //Img-task, duplicate files
@@ -40,8 +35,6 @@ function imgTask() {
     return src(files.imgPath)
     
     .pipe(dest('pub'))
-    .pipe(browserSync.stream());
-    
     }
 //CSS-task, minify, concat
 function cssTask() {
@@ -49,8 +42,7 @@ function cssTask() {
     .pipe(concat('styles.css'))
     .pipe(minifyCSS())
     .pipe(dest('pub/css'))
-    .pipe(browserSync.stream());
-    
+    .pipe(livereload());
 }
 //JS-task,  minify, concat
 function jsTask() {
@@ -58,15 +50,16 @@ function jsTask() {
     .pipe(concat('scripts.js'))
     .pipe(terser())
     .pipe(dest('pub/js'))
-    .pipe(browserSync.stream());
+    .pipe(livereload());
 }
 //Watch
 function watchTask(){
-  watch([files.htmlPath, files.jsPath, files.cssPath, files.imgPath], parallel(htmlTask, jsTask, cssTask, imgTask, reloadTask)).on("change", browserSync.reload);
+    livereload.listen();
+  watch([files.htmlPath, files.jsPath, files.cssPath, files.imgPath], parallel(htmlTask, jsTask, cssTask, imgTask)).on('change', livereload.changed);
 }
 
 
 exports.default = series (
-    parallel(htmlTask, jsTask, imgTask, cssTask, reloadTask),
+    parallel(htmlTask, jsTask, imgTask, cssTask),
     watchTask
 );
