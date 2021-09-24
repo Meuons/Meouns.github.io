@@ -3,7 +3,7 @@ const concat = require('gulp-concat');
 const minifyCSS = require('gulp-minify-css');
 const terser = require('gulp-terser');
 var browserSync = require('browser-sync').create();
-const sass = require('gulp-sass')(require('sass'));
+
 
 
 const options = {
