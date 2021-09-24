@@ -34,4 +34,5 @@ Write the follwing commands in the terminal
 3. npm install --save-dev gulp-cli
 4. npm install --save-dev gulp-minify-css
 5. npm install --save-dev browser-sync
-6. gulp
+6. npm install
+7. gulp
