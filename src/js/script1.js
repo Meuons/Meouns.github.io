@@ -1,6 +1,7 @@
 
    function slideRight(){
    let x = document.getElementsByClassName('current');
+      let i;
 for (i = 0; i < x.length; i++) {
   let id = x[i].id
  let number = parseInt(id);
